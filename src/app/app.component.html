@@ -1,20 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<h1>A Simple Angular Liquid Fill Gauge Demo</h1>
 
+<h2>Default Parameters</h2>
+<app-ngx-d3-liquid-fill-gauge></app-ngx-d3-liquid-fill-gauge>
+
+<h2>Setting just the guage value</h2>
+<app-ngx-d3-liquid-fill-gauge [value]="22"></app-ngx-d3-liquid-fill-gauge>
+
+<h2>All the settings of the original Liquid Fill Guage implementation are exposed as inputs to the Angular Component</h2>
+<app-ngx-d3-liquid-fill-gauge [value]="77" [minValue]="0" [maxValue]="100" [circleThickness]="0.05" [circleFillGap]="0.05"
+  [circleColor]="'#178BCA'" [waveHeight]="0.05" [waveCount]="1" [waveRiseTime]="1000" [waveAnimateTime]="18000" [waveRise]="true"
+  [waveHeightScaling]="true" [waveAnimate]="true" [waveColor]="'#178BCA'" [waveOffset]="0" [textVertPosition]=".5" [textSize]="1"
+  [valueCountUp]="true" [displayPercent]="true" [textColor]="'#045681'" [waveTextColor]="'#A4DBf8'">
+</app-ngx-d3-liquid-fill-gauge>
