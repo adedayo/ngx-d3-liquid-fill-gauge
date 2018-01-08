@@ -1,6 +1,6 @@
 # Angular Component for Curtis Bratton's D3 Liquid Fill Gauge
 
-![Sample Gauge](https://github.com/adedayo/ngx-d3-liquid-fill-gauge/images/sample.png)
+![Sample Gauge](https://github.com/adedayo/ngx-d3-liquid-fill-gauge/blob/master/images/sample.png)
 
 I really liked Curtis Bratton's D3 Liquid Fill Gauge (code here: http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6) and wanted to use it in an Angular project, so I turned it to a component and packaged it as a module in case somebody else finds it useful. 
 
