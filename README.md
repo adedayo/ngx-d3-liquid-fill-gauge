@@ -10,11 +10,11 @@ In the process I upgraded the D3 API to V4 and made minor modifications to Curti
 
 1. Install 'ngx-d3-liquid-fill-gauge' with npm
 ```
-npm install @adedayo/ngx-d3-liquid-fill-gauge
+npm install ngx-d3-liquid-fill-gauge
 ```
 2. Import 'NgxD3LiquidFillGaugeModule' in your Angular Module 
 ```javascript
-import { NgxD3LiquidFillGaugeModule } from '@adedayo/ngx-d3-liquid-fill-gauge';
+import { NgxD3LiquidFillGaugeModule } from 'ngx-d3-liquid-fill-gauge';
 
 imports: [ ...... , NgxD3LiquidFillGaugeModule ],
 ```
