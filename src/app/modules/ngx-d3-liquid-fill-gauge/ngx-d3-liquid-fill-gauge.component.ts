@@ -1,14 +1,15 @@
-import { Component, OnInit, ViewChild, ElementRef, Input, ViewEncapsulation, OnChanges, SimpleChanges, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, ViewEncapsulation, OnChanges, SimpleChanges, AfterViewInit } from '@angular/core';
 import * as d3 from 'd3';
 import * as liquid from './liquidFillGauge';
 
 
 @Component({
   selector: 'app-ngx-d3-liquid-fill-gauge',
-  template: '<div></div>',
+  template: '<div #gauge></div>',
   styles: [],
 })
 export class NgxD3LiquidFillGaugeComponent implements OnInit, OnChanges {
+  @ViewChild('gauge') gauge: any;
   id = 'gauge' + Math.floor(Math.random() * 100000) + 1; // assign a random ID to SVG component
   private defaultSettings = liquid.liquidFillGaugeDefaultSettings();
   @Input() private value = 0;
@@ -37,11 +38,6 @@ export class NgxD3LiquidFillGaugeComponent implements OnInit, OnChanges {
   private width: number;
   private height: number;
 
-
-  constructor(private elementRef: ElementRef) {
-
-  }
-
   ngOnInit() {
     this.createChart();
   }
@@ -51,10 +47,10 @@ export class NgxD3LiquidFillGaugeComponent implements OnInit, OnChanges {
   }
 
   createChart(): any {
-    const element = this.elementRef.nativeElement;
+    const element = this.gauge.nativeElement;
     this.width = element.offsetWidth - this.margin.left - this.margin.right;
     this.height = element.offsetHeight - this.margin.top - this.margin.bottom;
-    const svg = d3.select(element)
+    d3.select(element)
       .append('svg').attr('id', this.id);
     const settings = {
       minValue: this.minValue,

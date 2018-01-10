@@ -91,4 +91,4 @@ A few demonstrations
 * D3
 
 ## License
-3-Clause BSD https://opensource.org/licenses/BSD-3-Clause
+BSD 3-Clause https://opensource.org/licenses/BSD-3-Clause
