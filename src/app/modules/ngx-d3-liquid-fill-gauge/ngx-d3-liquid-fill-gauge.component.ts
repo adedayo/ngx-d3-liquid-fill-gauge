@@ -34,10 +34,6 @@ export class NgxD3LiquidFillGaugeComponent implements OnInit, OnChanges {
   @Input() private textColor = this.defaultSettings.textColor;
   @Input() private waveTextColor = this.defaultSettings.waveTextColor;
 
-  private margin: any = { top: 20, bottom: 20, left: 20, right: 20 };
-  private width: number;
-  private height: number;
-
   ngOnInit() {
     this.createChart();
   }
@@ -48,10 +44,10 @@ export class NgxD3LiquidFillGaugeComponent implements OnInit, OnChanges {
 
   createChart(): any {
     const element = this.gauge.nativeElement;
-    this.width = element.offsetWidth - this.margin.left - this.margin.right;
-    this.height = element.offsetHeight - this.margin.top - this.margin.bottom;
     d3.select(element)
-      .append('svg').attr('id', this.id);
+      .append('svg').attr('id', this.id)
+      .attr('width', '150')
+      .attr('height', '150');
     const settings = {
       minValue: this.minValue,
       maxValue: this.maxValue,
