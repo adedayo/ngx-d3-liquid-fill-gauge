@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input, ViewEncapsulation, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, ViewEncapsulation, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
 import * as d3 from 'd3';
 import * as liquid from './liquidFillGauge';
 
@@ -8,7 +8,8 @@ import * as liquid from './liquidFillGauge';
   template: '<div #gauge></div>',
   styles: [],
 })
-export class NgxD3LiquidFillGaugeComponent implements OnInit {
+export class NgxD3LiquidFillGaugeComponent implements OnInit, OnChanges {
+
   @ViewChild('gauge') gauge: any;
   id = 'gauge' + Math.floor(Math.random() * 100000) + 1; // assign a random ID to SVG component
   private defaultSettings = liquid.liquidFillGaugeDefaultSettings();
@@ -35,6 +36,10 @@ export class NgxD3LiquidFillGaugeComponent implements OnInit {
   @Input() private waveTextColor = this.defaultSettings.waveTextColor;
 
   ngOnInit() {
+    this.createChart();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
     this.createChart();
   }
 
