@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  second = 77;
+
+  add(v: number) {
+    this.second += v;
+  }
 }

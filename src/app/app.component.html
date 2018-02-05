@@ -6,8 +6,10 @@
 <h2>Setting just the guage value</h2>
 <app-ngx-d3-liquid-fill-gauge [value]="22"></app-ngx-d3-liquid-fill-gauge>
 
+<input type="text" (keyup.enter)="add(10)">
+
 <h2>All the settings of the original Liquid Fill Guage implementation are exposed as inputs to the Angular Component</h2>
-<app-ngx-d3-liquid-fill-gauge [value]="77" [minValue]="0" [maxValue]="100" [circleThickness]="0.05" [circleFillGap]="0.05"
+<app-ngx-d3-liquid-fill-gauge [value]="second" [minValue]="0" [maxValue]="100" [circleThickness]="0.05" [circleFillGap]="0.05"
   [circleColor]="'#178BCA'" [waveHeight]="0.05" [waveCount]="1" [waveRiseTime]="1000" [waveAnimateTime]="18000" [waveRise]="true"
   [waveHeightScaling]="true" [waveAnimate]="true" [waveColor]="'#178BCA'" [waveOffset]="0" [textVertPosition]=".5" [textSize]="1"
   [valueCountUp]="true" [displayPercent]="true" [textColor]="'#045681'" [waveTextColor]="'#A4DBf8'">

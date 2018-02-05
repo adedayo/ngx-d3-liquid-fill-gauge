@@ -44,7 +44,10 @@ export class NgxD3LiquidFillGaugeComponent implements OnInit, OnChanges {
   }
 
   createChart(): any {
-    const element = this.gauge.nativeElement;
+    const element: Element = this.gauge.nativeElement;
+    //clear previous chart
+    d3.select(element).selectAll('*').remove();
+
     d3.select(element)
       .append('svg').attr('id', this.id)
       .attr('width', '150')
