@@ -1,8 +1,8 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-  "src": "./src/app/modules/ngx-d3-liquid-fill-gauge",
   "dest": "dist/ngx-d3-liquid-fill-gauge",
   "lib": {
     "entryFile": "./src/app/modules/public_api.ts"
-  }
+  },
+  "workingDirectory": ".ng_pkg_build"
 }
