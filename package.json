@@ -1,6 +1,6 @@
 {
   "name": "ngx-d3-liquid-fill-gauge",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "license": "BSD-3-Clause",
   "repository": "https://github.com/adedayo/ngx-d3-liquid-fill-gauge.git",
   "scripts": {
@@ -11,7 +11,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "npm run packagr; npm publish"
+    "deploy": "npm run build && npm run packagr && npm publish"
   },
   "private": false,
   "peerDependencies": {
