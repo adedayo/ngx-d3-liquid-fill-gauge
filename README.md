@@ -1,3 +1,6 @@
+# Deprecation
+This project is now deprecated and moved to https://github.com/adedayo/ngx-liquid-gauge. If you must use this version, please use only version 1.0.0 because later versions are broken in newer Angular releases.
+
 # Angular Component for Curtis Bratton's D3 Liquid Fill Gauge
 
 I really liked Curtis Bratton's D3 Liquid Fill Gauge (code here: http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6) and wanted to use it in an Angular project, so I turned it to a component and packaged it as a module in case somebody else finds it useful. 
