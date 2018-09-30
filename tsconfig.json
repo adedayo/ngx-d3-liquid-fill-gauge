@@ -14,6 +14,16 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "module": "es2015",
+    "baseUrl": "./",
+    "paths": {
+      "ngx-d3-liquid-fill-g": [
+        "dist/ngx-d3-liquid-fill-g"
+      ],
+      "ngx-d3-liquid-fill-g/*": [
+        "dist/ngx-d3-liquid-fill-g/*"
+      ]
+    }
   }
 }
